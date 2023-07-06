@@ -1,0 +1,39 @@
+<header class="container header">
+  <!-- ==== NAVBAR ==== -->
+  <nav class="nav">
+    <div class="logo">
+      <h2 routerLink="/Home" style="cursor: pointer;">Attia's Tuto</h2>
+    </div>
+
+    <div class="nav_menu" id="nav_menu">
+      <button class="close_btn" id="close_btn">
+        <i class="ri-close-fill"></i>
+      </button>
+
+      <ul class="nav_menu_list">
+        <li class="nav_menu_item" routerLinkActive="active" *ngIf="isLoggedIn">
+          <a routerLink="/User" class="nav_menu_link">User</a>
+        </li>
+        <li class="nav_menu_item" routerLinkActive="active" *ngIf="isLoggedIn">
+          <a routerLink="/Admin" class="nav_menu_link">Admin</a>
+        </li>
+        <li class="nav_menu_item" *ngIf="isLoggedIn" style="cursor: pointer;">
+          <a (click)="signOut()" class="nav_menu_link">LogOut</a>
+        </li>
+        <li class="nav_menu_item" routerLinkActive="active" *ngIf="!isLoggedIn">
+          <a routerLink="/SignIn" class="nav_menu_link">SignIn</a>
+        </li>
+        <li class="nav_menu_item" routerLinkActive="active" *ngIf="!isLoggedIn">
+          <a routerLink="/SignUp" class="nav_menu_link">SignUp</a>
+        </li>
+        <li class="nav_menu_item" *ngIf="isLoggedIn">
+          <p class="toggle_btn">
+            {{getUserName()}}
+          </p>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <hr>
+</header>
+<router-outlet></router-outlet>

@@ -1,0 +1,21 @@
+<section class="vh-100" style="background-color: #eee;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-12 col-xl-4">
+
+        <div class="card" style="border-radius: 15px;">
+          <div class="card-body text-center">
+            <div class="mt-3 mb-4">
+              <img
+                src="https://scontent.ftun15-1.fna.fbcdn.net/v/t39.30808-6/269839779_969055454004946_8214199365716942693_n.jpg?_nc_cat=104&cb=99be929b-3346023f&ccb=1-7&_nc_sid=730e14&_nc_ohc=lVdbpLDBQFUAX9fUsIu&_nc_ht=scontent.ftun15-1.fna&oh=00_AfBmk178R28QKC7TNmIT2zYOPzZ8O4KJgn0RdL90YJSSxQ&oe=64AADFC6"
+                class="rounded-circle img-fluid" style="width: 100px;" />
+            </div>
+            <h4 class="mb-2">{{userInfo.firstname +" "+userInfo.lastname}}</h4>
+            <p class="text-muted mb-4">@Programmer : {{userInfo.admin ? "Admin" : "User" }} <span class="mx-2">|</span>
+              <a [href]="'mailto:'+[userInfo.email]">{{userInfo.email}}</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
