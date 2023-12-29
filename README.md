@@ -1,27 +1,48 @@
-# AuthAngular
+# Secure Angular Authentication Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
+This Angular project demonstrates a secure authentication setup with guards, interceptors, services, and secure routing.
 
-## Development server
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. Clone the repository:
 
-## Code scaffolding
+   ```bash
+   git clone https://github.com/your-username/secure-angular-auth.git
+   cd secure-angular-auth
+2. Install dependencies:
+   ```bash
+   npm install
+3. Run the development server:
+  ```bash
+  ng serve --open
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This will open the application in your default browser.
 
-## Build
+# Features
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Authentication Service (auth.service.ts)
 
-## Running unit tests
+- Handles user authentication logic.
+- Modify the isAuthenticated method to implement your authentication logic.
+## Auth Guard (auth.guard.ts)
+- Protects routes from unauthorized access.
+- Redirects to the login page if the user is not authenticated.
+## Auth Interceptor (auth.interceptor.ts)
+- Handles HTTP requests to include authentication tokens.
+ -Modify as needed for your specific authentication mechanism.
+## Secure Routing
+- Utilizes Angular routing with guards to secure navigation.
+##LinkedIn Learning Tutorial
+For a detailed tutorial on securing Angular applications, check out the [LinkedIn Learning Course](https://www.linkedin.com/pulse/mastering-angular-16-authentication-build-secure-seamless-attia-imed/?trackingId=n2w3WspwTTeFXaKQ%2BwRHcA%3D%3D)
+ on securing Angular applications. This course covers various security aspects, including authentication, authorization, and securing API communications.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Contributing
+Feel free to contribute to this project by following the standard GitHub flow:
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Fork the repository
+2. Create a new branch (git checkout -b feature/new-feature)
+3. Make your changes
+4. Commit your changes (git commit -m 'Add new feature')
+5. Push to the branch (git push origin feature/new-feature)
+6. Create a new Pull Request
+   
